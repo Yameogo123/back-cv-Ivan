@@ -52,9 +52,8 @@ exports.delete=(req, res, next)=>{
                 message: 'certification deleted successfully!'
             });
         }
+        conn.end();
     })
-
-    conn.end();
 }
 
 exports.get=(req, res, next)=>{
@@ -66,7 +65,6 @@ exports.get=(req, res, next)=>{
         }else{
             res.status(201).json(JSON.parse(JSON.stringify(results)));
         }
+        conn.end();
     })
-
-    conn.end();
 }
