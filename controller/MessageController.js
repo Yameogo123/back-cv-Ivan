@@ -17,8 +17,6 @@ exports.add= (req, res, next)=>{
             });
         }
     })
-
-    conn.end();
 }
 
 exports.upcontact=(req, res, next)=>{
@@ -39,8 +37,6 @@ exports.upcontact=(req, res, next)=>{
             });
         }
     })
-
-    conn.end();
 }
 
 exports.delete=(req, res, next)=>{
@@ -56,8 +52,6 @@ exports.delete=(req, res, next)=>{
             });
         }
     })
-
-    conn.end();
 }
 
 exports.get=(req, res, next)=>{
@@ -70,6 +64,4 @@ exports.get=(req, res, next)=>{
             res.status(201).json(JSON.parse(JSON.stringify(results)));
         }
     })
-
-    conn.end();
 }
