@@ -1,12 +1,12 @@
 const conn= require("../db/db")
 
 exports.add= (req, res, next)=>{
-    let title= req.body.title;
-    let date= req.body.date;
-    let place= req.body.place;
-    let link= req.body.link;
-    let image= req.body.image;
-    conn.query("insert into adresse (title, date, place, link, image) values (?,?,?,?,?)", [title, date, place, link, image], (err, results, fields)=>{
+    let mail= req.body.mail;
+    let phone= req.body.phone;
+    let country= req.body.country;
+    let town= req.body.town;
+    let adress= req.body.adress;
+    conn.query("insert into adresse (mail, phone, country, town, adress) values (?,?,?,?,?)", [mail, phone, country, town, adress], (err, results, fields)=>{
         if(err){
             res.status(400).json({
                 error: err
@@ -23,12 +23,12 @@ exports.add= (req, res, next)=>{
 
 exports.update=(req, res, next)=>{
     let _id= req.body.id;
-    let title= req.body.title;
-    let date= req.body.date;
-    let place= req.body.place;
-    let link= req.body.link;
-    let image= req.body.image;
-    conn.query("update adresse set title=?, date= ?, place= ?, link=?, image= ? where _id= ?", [title, date, place, link, image, _id], (err, results, fields)=>{
+    let mail= req.body.mail;
+    let phone= req.body.phone;
+    let country= req.body.country;
+    let town= req.body.town;
+    let adress= req.body.adress;
+    conn.query("update adresse set mail=?, phone= ?, country= ?, town=?, adress= ? where _id= ?", [mail, phone, country, town, adress, _id], (err, results, fields)=>{
         if(err){
             res.status(400).json({
                 error: err
