@@ -17,8 +17,6 @@ exports.add= (req, res, next)=>{
             });
         }
     })
-
-    conn.end();
 }
 
 exports.update=(req, res, next)=>{
@@ -39,8 +37,6 @@ exports.update=(req, res, next)=>{
             });
         }
     })
-
-    conn.end();
     
 }
 
@@ -54,7 +50,5 @@ exports.get=(req, res, next)=>{
             res.status(200).json(JSON.parse(JSON.stringify(results)));
         }
     })
-
-    conn.end();
     
 }
