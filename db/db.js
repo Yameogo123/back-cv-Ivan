@@ -11,7 +11,7 @@ connection.connect((err) => {
     if (err) {
       console.log("Error occurred", err);
     } else {
-        /*var sql1= "create table adresse (_id int NOT NULL AUTO_INCREMENT, title varchar(255), date varchar(255), place varchar(255), link varchar(255), image text, primary key (_id))";
+        var sql1= "create table adresse (_id int NOT NULL AUTO_INCREMENT, mail varchar(255), phone varchar(255), country varchar(255), town varchar(255), adress varchar(255), primary key (_id))";
         var sql2= "create table certification (_id int  NOT NULL AUTO_INCREMENT, title varchar(255), origin varchar(255), url varchar(255), image text, primary key (_id))";
         var sql3= "create table experience (_id int  NOT NULL AUTO_INCREMENT, start varchar(255), end varchar(255), job varchar(255), company varchar(255), description varchar(255), primary key (_id))";
         var sql4= "create table formation (_id int  NOT NULL AUTO_INCREMENT, start varchar(255), end varchar(255), place varchar(255), school varchar(255), subject varchar(255), primary key (_id))";
@@ -27,7 +27,7 @@ connection.connect((err) => {
             }
             console.log("created");
           })
-        })*/
+        })
         
       console.log("Connected to MySQL Server");
     }
