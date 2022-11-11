@@ -36,9 +36,8 @@ exports.update=(req, res, next)=>{
                 message: 'certification updated successfully!'
             });
         }
+        conn.end();
     })
-
-    conn.end();
 }
 
 exports.delete=(req, res, next)=>{
