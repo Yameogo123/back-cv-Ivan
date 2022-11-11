@@ -16,8 +16,6 @@ exports.add= (req, res, next)=>{
             });
         }
     })
-
-    conn.end();
 }
 
 exports.update=(req, res, next)=>{
@@ -36,7 +34,6 @@ exports.update=(req, res, next)=>{
                 message: 'certification updated successfully!'
             });
         }
-        conn.end();
     })
 }
 
@@ -52,7 +49,6 @@ exports.delete=(req, res, next)=>{
                 message: 'certification deleted successfully!'
             });
         }
-        conn.end();
     })
 }
 
@@ -65,6 +61,5 @@ exports.get=(req, res, next)=>{
         }else{
             res.status(201).json(JSON.parse(JSON.stringify(results)));
         }
-        conn.end();
     })
 }
