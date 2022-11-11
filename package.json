@@ -4,12 +4,8 @@
   "description": "backend of my CV",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "engines": {
-   "node": "12.11.1"
-   },
   "author": "",
   "license": "ISC",
   "dependencies": {
