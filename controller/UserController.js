@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 exports.login= (req, res, next)=>{
     let username= req.body.username
     let password= req.body.password
+    console.log(username)
     conn.query("select * from utilisateur where username = ?", username, (err, results, fields)=>{
         if(err){
             res.status(400).json({
